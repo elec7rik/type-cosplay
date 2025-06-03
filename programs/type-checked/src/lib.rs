@@ -19,7 +19,7 @@ pub mod type_checked {
     }
 
     pub fn update_admin(ctx: Context<UpdateAdmin>) -> Result<()> {
-        ctx.accounts.admin_config.admin = ctx.accounts.admin.key();
+        ctx.accounts.admin_config.admin = ctx.accounts.new_admin.key();
         Ok(())
     }
 }
